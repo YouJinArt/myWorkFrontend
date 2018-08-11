@@ -35,12 +35,6 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -167,10 +161,7 @@ a {
   -webkit-text-decoration-skip: objects;
 }
 
-a:hover {
-  color: #0056b3;
-  text-decoration: underline;
-}
+
 
 a:not([href]):not([tabindex]) {
   color: inherit;
