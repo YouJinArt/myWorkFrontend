@@ -58,11 +58,126 @@ body {
 }
 /*Хеадер*/
 .header {
-	margin: 0 auto;
+	
+}
+
+.head-header {
+	width: 1140px;
 	display: flex;
+	justify-content: space-between;
 	flex-wrap: wrap;
+	padding-top: 45px;
+	margin: 0 auto;
+}
+
+.logo {
+	font-family: lato-light, sans-serif;
+	color:  #3d3d40;
+	font-weight: 300;
+	font-size: 27px;
+	line-height: 32px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin-bottom: 41px;
 
 }
+
+.logo img {
+	margin-bottom: -10px;
+	margin-right: 10px;
+}
+
+.head-header .logo {
+	margin-top: -10px;
+}
+
+.form-browse-menu{
+	display: flex;
+}
+
+.button-browse-menu,
+.form-browse-menu input[type="text"],
+.form-browse-menu .search {
+	border: 1px solid #e6e6e6;
+	box-sizing: border-box;
+	background-color:  #ffffff;
+	height: 38px;
+	outline: none;
+}
+
+.button-browse-menu {
+	height: 38px;
+	width: 100px;
+	font-family: lato-light, sans-serif;
+	text-align: center;
+	line-height: 35px;
+	color:  #222222;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.form-browse-menu input[type="text"] {
+	width: 280px;
+	padding: 0 10px;
+}
+
+.form-browse-menu .search {
+	width: 38px;
+	color:  #a4a4a4;
+	font-size: 14px;
+	margin-right: 350px;
+
+}
+
+.hover-browse-menu {
+	display: none;
+	position: absolute;
+	z-index: 10;
+	text-align: left;
+	background-color:  #ffffff;
+	padding: 20px 30px;
+}
+
+.hover-browse-menu a {
+	color:  #4f4f4f;
+	font-size: 10px;
+	text-decoration: none;
+	line-height: 10px;
+}
+.hover-browse-menu li {
+	height: 20px;
+}
+
+.browse-menu:hover .hover-browse-menu{
+	display: block;
+}
+
+.basket-button {
+	background-color:  #f16d7f;
+	width: 130px;
+	height: 38px;
+	color:  #ffffff;
+	font-size: 15px;
+	line-height: 32px;
+	border: none;
+	position: relative;
+}
+
+.basket-button::before {
+	content: url(../img/svg/bascet.svg);
+    position: absolute;
+    right: 150px;
+    top: 5px;
+}
+
+.hover-browse-menu .type-catalog {
+	color: #000;
+	font-size: 14px;
+	line-height: 32px;
+	text-align: left;
+}
+			
 
 .nav {
 	width: 100%;
@@ -578,23 +693,6 @@ input[type="button"]:active {
 	top: 2px;
 }
 
-.logo {
-	font-family: lato-light, sans-serif;
-	color:  #3d3d40;
-	font-weight: 300;
-	font-size: 27px;
-	line-height: 32px;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
-	margin-bottom: 41px;
-
-}
-
-.logo img {
-	margin-bottom: -10px;
-	margin-right: 10px;
-}
 
 .txt-inform .logo {
 	margin-bottom: 41px;
