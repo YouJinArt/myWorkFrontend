@@ -8,10 +8,21 @@
  div { padding: 10px; }
 </style>
 <script>
+    var count = 0;
+    window.onload = function() {
+        var button = document.getElementById("clickme");
+        button.onclick = handlerClick;
+    };
+    function handlerClick() {
+        var message = "Вы нажали на кнопку ";
+        var divMessage = document.getElementById("message");
+        count++;
+        divMessage.innerHTML = message + count + " раз.";
+    }
 </script>
 </head>
 <body>
- <button id="clickme">Click me!</button>
- <div id="message"></div>
+ <button id="clickme">Нажми меня!</button>
+ <div id="message">Вы не нажали ни разу на кнопку.</div>
 </body>
 </html>
