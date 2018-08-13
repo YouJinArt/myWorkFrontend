@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dogs</title>
+    <script>
+        function Dog(name, breed, weight) {
+            this.name = name;
+            this.breed = breed;
+            this.weight = weight;
+            this.bark = function() {
+                if (this.weigth > 25) {
+                    alert(this.name + ": ГАВ ГАВ!!!");
+                } else {
+                    alert(this.name + ": тяв тяв..");
+                }
+            };
+        }
+
+        var Fido = new Dog("Фидо", "Авчарка", 38);
+        var Pluto = new Dog("Плуто", "Мультсобака", 30);
+        var drujok = new Dog("Дружок", "Дворняга", 15);
+        var dogs = [Fido, Pluto, drujok];
+        for (var i = 0; i < dogs.length; i++) {
+            dogs[i].bark();
+            
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
