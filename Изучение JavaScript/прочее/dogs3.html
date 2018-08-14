@@ -23,11 +23,11 @@
         };
         
         Dog.prototype.run = function() {
-            console.log("Фас!");
+            console.log(this.name + "Фас!");
         };
         
         Dog.prototype.wag = function() {
-            console.log("Вилять хвостом!");
+            console.log(this.name + "Виляет хвостом!");
         };
         
         var zhychka = new Dog("Жучка", "Дворняга", 15);
@@ -49,6 +49,22 @@
         puls.bark();
         puls.run();
         puls.wag();
+        
+        Dog.prototype.sitting = false;
+        
+        Dog.prototype.sit = function() {
+            if (this.sitting) {
+                console.log(this.name + " уже сидит.");
+            } else {
+                this.sitting = true;
+                console.log(this.name + " выполняет команду 'Сидеть'.");
+            }
+        };
+        
+        zhychka.sit();
+        zhychka.sit();
+        rex.sit();
+        rex.sit();
         
     
 
