@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dogs</title>
+    <script>
+        
+        function Dog(name, breed, weight) {
+            this.name = name;
+            this.breed = breed;
+            this.weight = weight;
+        }
+        
+        Dog.prototype.species = "Canine";
+        
+        Dog.prototype.bark = function() {
+            if (this.weight > 20) {
+                console.log(this.name + " ГАВ ГАВ!!!");
+            } else {
+                console.log(this.name + " тяв тяв...");
+            }
+        };
+        
+        Dog.prototype.run = function() {
+            console.log("Фас!");
+        };
+        
+        Dog.prototype.wag = function() {
+            console.log("Вилять хвостом!");
+        };
+        
+        var zhychka = new Dog("Жучка", "Дворняга", 15);
+        var rex = new Dog("Рекс", "Авчарка", 30);
+        var puls = new Dog("Пульс", "Дворняга", 10);
+        
+        zhychka.bark();
+        zhychka.run();
+        zhychka.wag();
+        
+        rex.bark();
+        rex.run();
+        rex.wag();
+        
+        puls.bark();
+        puls.run();
+        puls.wag();
+        
+    
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
