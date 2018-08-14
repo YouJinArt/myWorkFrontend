@@ -21,29 +21,53 @@
         Robot.prototype.blinkLights = function() {
             console.log(this.name + " ярко сверкает.");
         }
-        
+
         var robby = new Robot("Робби", 1956, "Доктор Мобиус");
-        
+
         var rosie = new Robot("Роси", 1962, "Георгий Пельшман");
-        
+
         robby.onOffSwitch = true;
         robby.makeCoffee = function() {
             console.log(this.name + " побежал в старбакс за 4-мя чашками кофе.");
         }
-        
+
         rosie.cleanHouse = function() {
             console.log(this.name + " начинает уборку в доме.");
         }
-        
+
         console.log(robby.name + " был произведен компанией " + robby.maker + " в " + robby.year + " году. Владельцем является " + robby.owner + ".");
         robby.makeCoffee();
         robby.blinkLights();
-        
+
         console.log(rosie.name + " был произведен компанией " + rosie.maker + " в " + rosie.year + " году. Владельцем является " + rosie.owner + ".");
-        
+
         rosie.cleanHouse();
+
+        function Game() {
+            this.level = 0;
+        }
+
+        Game.prototype.play = function() {
+            this.level++;
+            console.log("Добро пожаловать в игру. У вас " + this.level + " уровень.");
+            this.unlock();
+        }
+
+        Game.prototype.unlock = function() {
+            if (this.level === 42) {
+                Robot.prototype.deployLaser = function() {
+                    console.log(this.name + " стреляет лазером!!!");
+                }
+            }
+        }
+
+        var game = new Game();
+        while (game.level < 42) {
+            game.play();
+        };
         
-        
+        robby.deployLaser();
+        rosie.deployLaser();
 
     </script>
 </head>
