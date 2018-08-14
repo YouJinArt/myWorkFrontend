@@ -34,6 +34,10 @@
         var rex = new Dog("Рекс", "Авчарка", 30);
         var puls = new Dog("Пульс", "Дворняга", 10);
         
+        puls.bark = function() {
+            console.log(this.name + " Гтяв Гтяв.!.");
+        }
+        
         zhychka.bark();
         zhychka.run();
         zhychka.wag();
