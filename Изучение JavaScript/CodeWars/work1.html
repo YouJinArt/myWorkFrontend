@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dogs</title>
+    <script>
+        var a = parseInt(prompt("Введите первое число."));
+        var b = parseInt(prompt("Введите второе число."));
+       function sumNumber(a,b) {
+           var result = 0;
+           var i;
+           if ( a === null || b === null) {
+               console.error("Вы не ввели все значения.");
+               alert("Вы не ввели все значения.");
+           } else if ( isNaN(a) || isNaN(b)) {
+               console.error("Вы ввели не число.");
+               alert("Вы ввели не число.");
+           } else if (a == b) {
+               return a;
+           } else if (a < b){
+            for (i = a; i <= b; i++) {
+                   result = result + i;
+               }  
+           } else {
+              for (i = b; i <= a; i++){
+                   result = result + i;
+               }
+           }
+           return result;
+       }
+        console.log("Сумма чисел между первым и в торым числом составила: " + sumNumber(a,b));
+        alert("Сумма чисел между первым и в торым числом составила: " + sumNumber(a,b));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
