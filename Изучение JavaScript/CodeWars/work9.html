@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dogs</title>
+    <script>
+        // поменять элементы масива местами
+        var a = "aaa";
+
+        function validatePIN(pin) {
+            var numberPin;
+            if (pin.length != 4 && pin.length != 6) {
+                return false;
+            }
+            var array = pin.split("");
+            for (var i = 0; i < array.length; i++) {
+                numberPin = Number.parseInt(array[i]);
+                if (isNaN(numberPin)) {
+                    return false;
+                }
+            }
+            return true;
+
+
+            /* for (var i = 0; i < pin.length; i++) {
+                if (pin[i] == a) {
+                    return false;
+                } esle {
+                    return true;
+                }
+             }*/
+        }
+
+        console.log(validatePIN(a));
+
+        // более короткий вариант 
+
+        function validatePIN(pin) {
+            return (pin.length == 4 || pin.length == 6) && parseInt(pin) == pin
+        }
+
+        function validatePIN(pin) {
+            var l = pin.length
+            return (l === 4 || l === 6) ? Number.isInteger(Number(pin)) : false
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
