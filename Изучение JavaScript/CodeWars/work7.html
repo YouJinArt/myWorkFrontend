@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dogs</title>
+    <script>
+        
+       // Вывод Минимаоьного и Мксимального числа Массива
+        
+        function minMax(arr) {
+            var arrey = [];
+            arrey[0] = Math.min.apply(null, arr);
+            arrey[1] = Math.max.apply(null, arr);
+            return arrey;
+        }
+
+        // Альтернативный вариант
+
+        function minMax(arr) {
+            return [Math.min.apply(Math, arr), Math.max.apply(Math, arr)];
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
