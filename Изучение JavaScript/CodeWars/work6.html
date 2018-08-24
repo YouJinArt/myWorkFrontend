@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dogs</title>
+    <script>
+        //Сложить 2 числа и вывести сумму в двоичном коде
+        function inArray(array1, array2) {
+            var newArray1 = [];
+            var newArray2 = [];
+
+            for (var i = 0; i < array1.length; i++) {
+                for (var j = 0; j < array2.length; j++)
+                    if (array2[j].indexOf(array1[i]) !== -1) {
+                        newArray1.push(array1[i])
+                    }
+            }
+            nextInput:
+                for (var i = 0; i < newArray1.length; i++) {
+                    var str = newArray1[i]; // для каждого элемента
+                    for (var j = 0; j < newArray2.length; j++) { // ищем, был ли он уже?
+                        if (newArray2[j] == str) continue nextInput; // если да, то следующий
+                    }
+                    newArray2.push(str);
+                }
+
+
+            return newArray2;
+        }
+
+        a1 = ["xyz", "live", "strong"]
+
+
+        a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
+
+        console.log(inArray(a1, a2));
+
+        a1 = "lively";
+        a2 = "live";
+        if (a1.indexOf(a2) !== -1) {
+            console.log(a2);
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
