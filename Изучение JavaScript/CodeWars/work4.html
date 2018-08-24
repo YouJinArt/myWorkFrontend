@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dogs</title>
+    <script>
+        /*Перебор гластных букв*/
+        var stringNext = "jasdjjsdhhdsaasasd"
+        function presetVowels(str) {
+            var vowelsCount = 0;
+            var array = str.split("");
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] == "a" || array[i] == "e" || array[i] == "i" || array[i] == "o" || array[i] == "u") {
+                    vowelsCount++;
+                }
+            }
+            return vowelsCount;
+        }
+console.log(presetVowels(stringNext));
+        
+    // Еще один вариант кода
+        function getCount(str) {
+  var vowelsCount = 0;
+  var vowels = ["a","e","i","o","u"];
+  for(var i = 0;i < str.length;i++){
+    for(var j=0;j<vowels.length;j++){
+      if(str[i] === vowels[j]){
+        vowelsCount++;
+      }
+    }
+  }
+  
+  return vowelsCount;
+}
+        
+        // Еще один вариант
+        function getCount(str) {
+  var vowelsCount = 0;
+  var vowels = ['a','e','i','o','u']; // create array of vowels
+  
+  str.split('').forEach(function(item){ //convert string given to array and iterate it
+    if (vowels.indexOf(item) >= 0) { vowelsCount++;} // check if each letter is in vowels array and ads 1 if is
+  });
+  
+  return vowelsCount;
+}
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
