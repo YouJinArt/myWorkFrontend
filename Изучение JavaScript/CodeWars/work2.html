@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dogs</title>
+    <script>
+        var s = "dasdasdasd";
+        console.log(typeof s);
+        var iterable = "dasdasdasd";
+
+var uniqueInOrder=function(iterable){
+            var array;
+            var i = 0;
+            var newArray = [];
+            var tmp = {};
+            if (typeof string == iterable) {
+                array = iterable.split("");
+            } else {
+                array = iterable;
+            }
+            for (; i < array.length; i++) {
+                if (array[i] in tmp) continue;
+                newArray.push(array[i]);
+                tmp[array[i]] = 1;
+            }
+
+            return newArray;
+        }
+  //your code here - remember iterable can be a string or an array
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
