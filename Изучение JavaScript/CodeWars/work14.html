@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        // строка в обратном порядке
+        const sequenceSum = (begin, end, step) => {
+            let sum = 0;
+            if (begin > end) {
+                return 0;
+            } else {
+                for (let i = begin; i <= end; i += step) {
+                    sum += i;
+                }
+            }
+            return sum;
+        };
+
+        console.log(sequenceSum(2, 6, 2, ));
+
+        // Альтернативный вариант 
+
+    //    const sequenceSum = (begin, end, step) => {
+    //        if (begin > end) {
+    //            return 0;
+    //        }
+    //        return begin + sequenceSum(begin + step, end, step);
+    //    };
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
