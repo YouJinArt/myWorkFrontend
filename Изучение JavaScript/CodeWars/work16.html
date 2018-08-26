@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //Перебор Числа по убываию 
+        function descendingOrder(n) {
+            return Number.parseInt(n.toString().split("").sort(function compareNumeric(a, b) {
+                if (a < b) return 1;
+                if (a > b) return -1;
+                // return b - a; альтернативный вариант
+            }).join(""));
+        };
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
